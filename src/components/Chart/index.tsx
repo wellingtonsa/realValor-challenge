@@ -26,6 +26,8 @@ interface Props {
 }
 
 const Chart: React.SFC<Props> = ({ data }) => {
+    moment.locale('pt-br');
+
     const [showDetails, setShowDetails] = useState<boolean>(false)
     
     const details = {
@@ -34,7 +36,7 @@ const Chart: React.SFC<Props> = ({ data }) => {
         endValue: data.datasets[0].data[data.datasets[0].data.length - 1],
         amount: data.datasets[0].data[data.datasets[0].data.length - 1] - data.datasets[0].data[0],
     };  
-
+    console.log(details)
     const handleShowDetails = () => {
         setShowDetails(!showDetails);
     }
@@ -53,7 +55,7 @@ const Chart: React.SFC<Props> = ({ data }) => {
             <div className="content">
             <div className="line">
                 <span>Data de início:</span>  
-                <span>{moment(details.startDate).format('DD/MM/YYYY')}</span>
+                <span>{details.startDate}</span>
             </div>
             <div className="line">
                 <span>Valor inicial:</span>  
