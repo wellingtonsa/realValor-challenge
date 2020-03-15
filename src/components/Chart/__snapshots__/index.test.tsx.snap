@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chart component should render chart component 1`] = `
+<Fragment>
+  <styled.div>
+    <h3>
+      Veja aqui os resultados para Cotação 01
+    </h3>
+    <Line
+      data={
+        Object {
+          "datasets": Array [
+            Object {
+              "backgroundColor": "#FFF",
+              "data": Array [
+                1,
+              ],
+              "label": "Cotação 01",
+            },
+          ],
+          "labels": Array [
+            "Label 1",
+          ],
+        }
+      }
+      options={
+        Object {
+          "responsive": true,
+        }
+      }
+    />
+  </styled.div>
+  <styled.div
+    show={false}
+  >
+    <div
+      className="header"
+      onClick={[Function]}
+    >
+      <span>
+        Clique aqui para ver detalhes
+      </span>
+    </div>
+    <div
+      className="content"
+    >
+      <div
+        className="line"
+      >
+        <span>
+          Data de início:
+        </span>
+        <span>
+          Label 1
+        </span>
+      </div>
+      <div
+        className="line"
+      >
+        <span>
+          Valor inicial:
+        </span>
+        <span>
+          1.00
+        </span>
+      </div>
+      <div
+        className="line"
+      >
+        <span>
+          Valor final:
+        </span>
+        <span>
+          1.00
+        </span>
+      </div>
+      <div
+        className="line"
+      >
+        <span>
+          Lucro/Prejuízo:
+        </span>
+        <span
+          style={
+            Object {
+              "color": "#F30000",
+            }
+          }
+        >
+          0.00
+        </span>
+      </div>
+    </div>
+  </styled.div>
+</Fragment>
+`;

@@ -7,16 +7,18 @@ interface IDataSet {
     label: string;
     backgroundColor: string;
     data:  number[]
-}
+};
 
 export interface IChart {
     labels: string[];
     datasets: IDataSet[];
-}
+};
 
-interface Props {
+interface IProps {
     data: IChart
-}
+};
+
+type Props = IProps; 
 
 const Chart: React.SFC<Props> = ({ data }) => {
     moment.locale('pt-br');

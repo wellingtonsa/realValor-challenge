@@ -37,6 +37,21 @@
     "test-all": "jest --runInBand -u",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react",
+      "@babel/preset-typescript"
+    ]
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -54,9 +69,12 @@
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.5",
+    "babel-jest": "^25.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
+    "jest": "^25.1.0",
+    "jest-enzyme": "^7.1.2",
     "ts-jest": "^25.2.1"
   }
 }
