@@ -1,18 +1,23 @@
 import React from 'react';
 import { Container } from './index.styles';
 
+
+interface IOption {
+  value: any;
+  target: any;
+}
 interface Props {
-    options: string[];
+    options: IOption[];
     label?: string;
-    onSelect(value:string): void;
-    selected: string;
+    onSelectValue(value:any): void;
+    selected: any;
 }
 
 const Select: React.SFC<Props> = ({
-    options, label, onSelect, selected
+    options, label, onSelectValue, selected
 }) => {
     const handleChange = (e:React.ChangeEvent<HTMLSelectElement>) => {
-        onSelect(e.target.value)
+      onSelectValue(e.target.value)
     }
   return(
       <Container>
@@ -20,8 +25,8 @@ const Select: React.SFC<Props> = ({
           <select
           value={selected}
           onChange={handleChange}>
-            {options.map((op, i) => (
-              <option key={i} value={op}>{op}</option>
+            {options.map((op:IOption, i) => (
+              <option key={i} value={op.value}>{op.target}</option>
             ))}
           </select>
       </Container>
