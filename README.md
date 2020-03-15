@@ -1,44 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Real Valor - Code Challenge Front-end
 
-## Available Scripts
+## Introdução
 
-In the project directory, you can run:
+Este é um desafio criado pela empresa Real Valor, que tem o intuito de averiguar as habilidades dos participantes e possiveis contratados da empresa.
 
-### `yarn start`
+A aplicação consistem em um SPA que calcula o rendimento de dois tipos de "investimentos", o Tesouro Direto pré-fixado e o Bitcoin. Dado como entrada o valor de aplicação no investimento, a data inicial da aplicação e tipo de investimento, o sistema gera um gráfico contendo o montante do usuário ao decorrer dos meses.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Processo de execução do projeto
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+**Clone o projeto executando esse comando no terminal**
+```
+git clone https://github.com/wellingtonsa/realValor-challenge.git
+```
+**Entre na pasta do projeto e execute o comando para instalação das dependências/libs do projeto**
 
-### `yarn test`
+```
+cd realValor-challenge
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm install // ou yarn install se preferir
+```
 
-### `yarn build`
+  **Por fim, os seguintes comandos podem ser dados:**
+  - ``` yarn dev ``` - para executar o projeto
+  - ``` yarn test ``` - para executar os testes
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Principais ferramentas utillizadas
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- React.js  
+  
+  **Algumas tecnologias, linguagem e bibliotecas utilizadas:**
+- Hooks
+- Styled Components
+- Redux e Redux Saga
+- Jest e Enzyme
+- Typescript
+- React Chart 2 e Chart.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Resultado
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<Image src='https://imgur.com/Ve0BRl9.png'>
+<Image src='https://imgur.com/dRaArsk.png'>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Considerações finais
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- No geral, esse challenge me proporcionou mais uma chance de tentar mostrar os meus conhecimentos em um só projeto. Eu tentei adicionar um pouco de tudo que ja estudei e já apliquei, algumas coisas poderiam ser bem mais trabalhadas, como os testes por exemplo. Mas, por conta de algumas variante acabei deixando mais abstrato. Enfim, quero agradecer pelo excelente processo seletivo e espero que tenhamos uma outra oportunidade na próxima fase. Até mais! =D
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+

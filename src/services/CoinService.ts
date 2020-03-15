@@ -61,7 +61,7 @@ export async function calcDirectTreasureHistorical(value:number, time:number){
             labels: [],
             datasets:[
             {
-                label: 'Tespuro Direto pré-fixado',
+                label: 'Tesouro Direto pré-fixado',
                 backgroundColor: '#d3d3d3',
                 data: []
             }
