@@ -9,13 +9,6 @@ interface IDataSet {
     data:  number[]
 }
 
-interface IDetails {
-    startDate: string;
-    startValue: number;
-    endValue: number
-    amount: number;
-}
-
 export interface IChart {
     labels: string[];
     datasets: IDataSet[];
