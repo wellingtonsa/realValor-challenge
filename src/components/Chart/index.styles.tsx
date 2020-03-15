@@ -41,12 +41,19 @@ export const Details = styled.div<{show:boolean}>`
     .content {
         border: 1px solid #fff;
         border-top: 0px;
+        border-radius: 0px 0px 4px 4px;
         background: #fff;
         color: #3c3c3c;
         opacity: ${props => props.show?'1': '0'};
         transition: 500ms;
         padding: 10px;
-
+        
+        .line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
     }
     
     @keyframes show {

@@ -11,10 +11,10 @@ interface IHistorical {
 export async function calcBitCoinHistorical(value:number, time:number){
    
     try {
-        // const bitcoinBRL = await api.get('/bpi/currentprice/BRL.json');
+
         let endDate = moment(new Date()).format('YYYY-MM-DD');
         let startDate = moment(endDate).subtract(time, 'years').format('YYYY-MM-DD');
-        console.log(endDate, startDate)
+
         const historical = await api.get(`/historical/close.json?start=${startDate}&end=${endDate}`)
 
         let data:IChart = {
@@ -32,7 +32,7 @@ export async function calcBitCoinHistorical(value:number, time:number){
             let amount = ((historical.data as IHistorical).bpi as any)[moment(startDate).format('YYYY-MM-DD')]*value;
             data = {
                 ...data,
-                labels: [...data.labels, moment(startDate).format('YYYY-MM-DD')],
+                labels: [...data.labels, moment(startDate).format('DD/MM/YYYY')],
                 datasets: [
                     {
                      ...data.datasets[0],

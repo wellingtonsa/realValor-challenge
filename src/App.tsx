@@ -22,6 +22,10 @@ const App: React.SFC = () => {
     setChart(chart)
   }
 
+  const handleResetSimulation = () => {
+    setChart(undefined);
+  }
+
 
   return(
     <Container>
@@ -47,6 +51,7 @@ const App: React.SFC = () => {
         <Button label="Calcular" onClick={handleCalculateHistorical}/>
       </Form>)
       :(<>
+        <Button label="Refazer simulação" onClick={handleResetSimulation}  styledObject={{ width: '505px', marginBottom: '5px'}}/>
         {chart &&(<Chart data={chart}/>)}
         </>)}
       <GlobalStyle/>
