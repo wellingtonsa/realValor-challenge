@@ -11,7 +11,7 @@ interface IHistorical {
 export async function calcBitcoinHistorical(value:number, time:number){
    
     try {
-
+        const USDToBRL = 0.21;
         let endDate = moment(new Date()).format('YYYY-MM-DD');
         let startDate = moment(endDate).subtract(time, 'years').format('YYYY-MM-DD');
 
@@ -29,7 +29,7 @@ export async function calcBitcoinHistorical(value:number, time:number){
 
         };
         while (moment(startDate).isBefore(moment(endDate))) {
-            let amount = ((historical.data as IHistorical).bpi as any)[moment(startDate).format('YYYY-MM-DD')]*value;
+            let amount = ((historical.data as IHistorical).bpi as any)[moment(startDate).format('YYYY-MM-DD')]*value*USDToBRL;
             data = {
                 ...data,
                 labels: [...data.labels, moment(startDate).format('DD/MM/YYYY')],
@@ -55,6 +55,7 @@ export async function calcDirectTreasureHistorical(value:number, time:number){
         let startDate = moment(endDate).subtract(time, 'years').format('YYYY-MM-DD');
 
         const percentage:number = 0.008333333;
+        const USDToBRL = 0.21;
 
         let data:IChart = {
             labels: [],
@@ -71,7 +72,7 @@ export async function calcDirectTreasureHistorical(value:number, time:number){
         let amount:number = eval(value.toString());
 
         while (moment(startDate).isBefore(moment(endDate))) {
-            amount = (amount + amount*percentage as number);
+            amount = (amount + amount*percentage*USDToBRL as number);
             data = {
                 ...data,
                 labels: [...data.labels, moment(startDate).format('DD/MM/YYYY')],
