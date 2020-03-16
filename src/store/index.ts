@@ -6,7 +6,7 @@ import { Reducer } from 'react';
 import { all, fork } from 'redux-saga/effects';
 
 import { IChartState } from './chart/types';
-import { UserReducer } from './chart/reducers';
+import { ChartReducer } from './chart/reducers';
 import { watchChart } from './chart/sagas';
 
 export interface ApplicationState {
@@ -20,7 +20,7 @@ function* rootSaga() {
 }
 
 const reducers = combineReducers<ApplicationState>({
-  chart: UserReducer,
+  chart: ChartReducer,
 });
 
 const rootReducer = reducers;

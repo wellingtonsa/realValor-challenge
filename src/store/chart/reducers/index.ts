@@ -12,7 +12,7 @@ const initialState: IChartState = {
   ]
 };
 
-export const UserReducer = (state = initialState, action: ChartActionTypes): IChartState => {
+export const ChartReducer = (state = initialState, action: ChartActionTypes): IChartState => {
   switch (action.type) {
     case RECEIVE_HISTORICAL:
       return action.payload;
